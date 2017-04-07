@@ -2,8 +2,9 @@ import org.sql2o.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+// import java.util.Timestamp;
 
-public class Sighting {
+public class Sighting implements DatabaseManagement {
   private int animal_id;
   private String location;
   private String ranger_name;
