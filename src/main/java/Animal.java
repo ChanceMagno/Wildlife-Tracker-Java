@@ -29,6 +29,7 @@ public class Animal implements DatabaseManagement {
     }
   }
 
+  @Override
   public void save() {
     try(Connection con = DB.sql2o.open()) {
       String sql = "INSERT INTO animals (name) VALUES (:name);";

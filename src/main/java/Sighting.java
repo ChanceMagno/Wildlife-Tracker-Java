@@ -2,19 +2,24 @@ import org.sql2o.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-// import java.util.Timestamp;
+import java.sql.Timestamp;
 
 public class Sighting implements DatabaseManagement {
   private int animal_id;
   private String location;
   private String ranger_name;
   private int id;
+  private Timestamp time_reported;
 
   public Sighting(int animal_id, String location, String ranger_name) {
     this.animal_id = animal_id;
     this.location = location;
     this.ranger_name = ranger_name;
     this.id = id;
+  }
+
+  public Timestamp getTimeReported() {
+    return time_reported;
   }
 
   public int getId() {
@@ -43,9 +48,10 @@ public class Sighting implements DatabaseManagement {
     }
   }
 
+  @Override
   public void save() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "INSERT INTO sightings (animal_id, location, ranger_name) VALUES (:animal_id, :location, :ranger_name);";
+      String sql = "INSERT INTO sightings (animal_id, location, ranger_name, time_reported) VALUES (:animal_id, :location, :ranger_name, now());";
       this.id = (int) con.createQuery(sql, true)
         .addParameter("animal_id", this.animal_id)
         .addParameter("location", this.location)
