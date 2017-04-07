@@ -15,6 +15,8 @@ public class Sighting implements DatabaseManagement {
   private String sex;
   private String type_of_sighting;
 
+
+
   public Sighting(int animal_id, String location, String ranger_name, String sex, String type_of_sighting) {
     this.animal_id = animal_id;
     this.location = location;
@@ -96,6 +98,14 @@ public class Sighting implements DatabaseManagement {
       return sighting;
     } catch (IndexOutOfBoundsException exception) {
       return null;
+    }
+  }
+
+  public static List<Sighting> mostSightings() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM sightings ORDER BY time_reported DESC;";
+      return con.createQuery(sql)
+        .executeAndFetch(Sighting.class);
     }
   }
 

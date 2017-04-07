@@ -1,8 +1,7 @@
 <h1>Report a Wildlife Sighting</h1>
-
+  <a href="most/sightings">here</a>
 <h3><a href="/animal/new">Add Animal to System</a></h3>
 <hr>
-
 <h3> Report Non-Endangered Animal Sighting </h3>
 <form action="/sighting" method="post">
   #if($animals.size() >= 0)
@@ -23,19 +22,15 @@
         <option value="vocal">Vocal</option>
         <option value="unknown">Unknown</option>
     </select>
-
     <label>Location</label>
     <input required type="text" name="latLong">
     <label>Your Name</label>
     <input required type="text" name="rangerName">
 
     <button type="submit">Submit Report</button>
-
   #end
 </form>
-
 <hr>
-
 <h3> Report Endangered Animal Sighting </h3>
 <form action="/endangered_sighting" method="post">
   #if($endangeredAnimals.size() >= 0)
@@ -56,7 +51,6 @@
         <option value="vocal">Vocal</option>
         <option value="unknown">Unknown</option>
     </select>
-
     <label>Location</label>
     <input required type="text" name="latLong">
     <label>Your Name</label>
@@ -64,10 +58,7 @@
     <button type="submit">Submit Report</button>
   #end
 </form>
-
-
 <h3>Endangered Animal Sightings</h3>
-
 #if ($endangeredAnimals.size() == 0)
   <a href="/animal/new">Add Animal to Database to Report a Sighting</a>
 #else
@@ -79,7 +70,6 @@
     </a>
   #end
 #end
-
 <h3>All Animals & Sightings</h3>
 #if ($animals.size() == 0)
   <a href="/animal/new">Add Animal to Database to Report a Sighting</a>
