@@ -1,0 +1,6 @@
+.jumbotron {
+  background-image: url("src/main/resources/public/app.css");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
