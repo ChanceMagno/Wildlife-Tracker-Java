@@ -12,12 +12,25 @@
         <option value="$animal.getId()">$animal.getName()</option>
       #end
     </select>
+    <select name="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="unknown">Unknown</option>
+    </select>
+    <select name="typeOfSighting">
+        <option value="visual">Visual</option>
+        <option value="tracks">Tracks</option>
+        <option value="vocal">Vocal</option>
+        <option value="unknown">Unknown</option>
+    </select>
 
     <label>Location</label>
-    <input type="text" name="latLong">
+    <input required type="text" name="latLong">
     <label>Your Name</label>
-    <input type="text" name="rangerName">
+    <input required type="text" name="rangerName">
+
     <button type="submit">Submit Report</button>
+
   #end
 </form>
 
@@ -32,11 +45,22 @@
         <option value="$endangered_animal.getId()">$endangered_animal.getName()</option>
       #end
     </select>
+    <select name="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="unknown">Unknown</option>
+    </select>
+    <select name="typeOfSighting">
+        <option value="visual">Visual</option>
+        <option value="tracks">Tracks</option>
+        <option value="vocal">Vocal</option>
+        <option value="unknown">Unknown</option>
+    </select>
 
     <label>Location</label>
-    <input type="text" name="latLong">
+    <input required type="text" name="latLong">
     <label>Your Name</label>
-    <input type="text" name="rangerName">
+    <input required type="text" name="rangerName">
     <button type="submit">Submit Report</button>
   #end
 </form>
