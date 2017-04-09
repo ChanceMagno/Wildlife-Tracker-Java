@@ -1,6 +1,16 @@
 .jumbotron {
-  background-image: url("src/main/resources/public/app.css");
+  background-image: url("http://data.thetravelcurator.com/2012/08/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  text-align: center;
+  background-size: 100% 100%;
+}
+
+.panel-heading {
+  border-style: solid;
+  border-color: lightgray;
+  background-image: url("https://media.giphy.com/media/Dzmg5QAojwb6M/giphy.gif");
+  background-repeat: no-repeat;
+  background-position: right;
 }
