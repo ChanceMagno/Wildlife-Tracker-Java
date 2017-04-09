@@ -5,6 +5,7 @@
   background-size: contain;
   text-align: center;
   background-size: 100% 100%;
+  color: darkgray;
 }
 
 .panel-heading {
@@ -13,4 +14,16 @@
   background-image: url("https://media.giphy.com/media/Dzmg5QAojwb6M/giphy.gif");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+a {
+  color: darkgreen;
+}
+
+.panel-footer {
+  text-align: center;
+}
+
+body {
+  color: darkgray;
 }
