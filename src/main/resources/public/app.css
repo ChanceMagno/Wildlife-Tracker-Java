@@ -25,5 +25,25 @@ a {
 }
 
 body {
-  color: darkgray;
+  color: black;
+}
+
+h3 {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.animalDanger {
+  color: red;
+  text-align: center;
+}
+
+.animalThanks {
+  color: black;
+  text-align
+}
+
+.animalSuccess {
+  text-align: center;
 }

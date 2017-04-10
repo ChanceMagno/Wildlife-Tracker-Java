@@ -95,6 +95,8 @@ public class App {
     get("/endangered_animal/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       EndangeredAnimal endangeredAnimal = EndangeredAnimal.find(Integer.parseInt(request.params("id")));
+      Sighting sighting = Sighting.find(Integer.parseInt(request.params("id")));
+      model.put("sighting", sighting);
       model.put("endangeredAnimal", endangeredAnimal);
       model.put("template", "templates/endangered_animal.vtl");
       return new ModelAndView(model, layout);

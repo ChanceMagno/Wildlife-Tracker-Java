@@ -15,7 +15,8 @@ public class Sighting implements DatabaseManagement {
   private String sex;
   private String type_of_sighting;
 
-
+  static final String THANK_YOU_MESSAGE = "Thanks for reporting a sighting to NW OUTDOORS Animal Sightings!";
+  static final String ANIMAL_IN_DANGER = "If this animal is endangered and in need of help please call 1-800-345-4563";
 
   public Sighting(int animal_id, String location, String ranger_name, String sex, String type_of_sighting) {
     this.animal_id = animal_id;
@@ -28,6 +29,14 @@ public class Sighting implements DatabaseManagement {
 
   public String getTypeofSighting() {
     return type_of_sighting;
+  }
+
+  public String getAnimalHelp() {
+    return ANIMAL_IN_DANGER;
+  }
+
+  public String getThankyou() {
+    return THANK_YOU_MESSAGE;
   }
 
   public String getSex() {
