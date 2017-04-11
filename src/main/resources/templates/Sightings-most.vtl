@@ -1,3 +1,18 @@
 <!-- sightings-most.vtl -->
+<div class="row">
+  <div class="col-offset-md-2 col-md-8">
+    <div class="recent">
+      <h1>Most recent sightings reported</h1>
+      #foreach ($sighting in $sightings)
+      A Wild <strong>$animals.find($sighting.getAnimalId()).getName()</strong> was reported seen at <strong>$sighting.getLocation()</strong>. The date and time of this reported sighting was <strong>$sighting.getTimeReported()</strong>, for further information you may contact Ranger <strong>$sighting.getRangerName()</strong>.
+      <hr>
+      <br>
+      #end
+    </div>
+  </div>
+  <div class="col-2-md">
+    <h3><a href="/">Home</a></h3>
+  </div>
+</div>
 
 <!-- sightings-most.vtl -->

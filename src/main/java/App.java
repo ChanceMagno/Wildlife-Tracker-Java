@@ -110,7 +110,8 @@ public class App {
 
     get("/most/sightings", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("animals", Animal.all());
+      model.put("animals", Animal.class);
+      model.put("animals", EndangeredAnimal.class);
       model.put("sightings", Sighting.mostSightings());
       model.put("template", "templates/Sightings-most.vtl");
       return new ModelAndView(model, layout);
